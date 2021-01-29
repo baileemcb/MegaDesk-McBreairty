@@ -28,13 +28,13 @@ namespace MegaDesk_McBreairty
             this.Close(); 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSaveQuote_Click(object sender, EventArgs e)
         {
+            var frmDisplayQuote = new DisplayQuote();
+            frmDisplayQuote.Tag = this;
+            frmDisplayQuote.Show();
+            this.Hide();
+
             // when clicking Save Quote button, will create a new desk using the 
             // new Desk() method 
             var desk = new Desk();
@@ -42,7 +42,7 @@ namespace MegaDesk_McBreairty
             //assign desk properties
             desk.Width = numericUpDownWidth.Value;
             desk.Depth = numericUpDownDepth.Value;
-            desk.NumberOfDrawers = numericUpDownDrawers.Value;
+            desk.NumberOfDrawers = (int)numericUpDownDrawers.Value;
 
             // create a desk quote
             var deskQuote = new DeskQuote();

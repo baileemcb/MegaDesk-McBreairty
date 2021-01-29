@@ -120,7 +120,6 @@ namespace MegaDesk_McBreairty
             this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Width: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // numericUpDownDepth
             // 

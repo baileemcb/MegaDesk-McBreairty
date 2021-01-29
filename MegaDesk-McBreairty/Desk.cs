@@ -30,7 +30,7 @@ namespace MegaDesk_McBreairty
 
         public decimal Depth { get; set; }
 
-        public decimal NumberOfDrawers { get; set; }
+        public int NumberOfDrawers { get; set; }
 
         public SurfaceMaterial SurfaceMaterial { get; set; }
     }

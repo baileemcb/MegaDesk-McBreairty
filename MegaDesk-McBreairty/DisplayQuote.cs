@@ -16,5 +16,21 @@ namespace MegaDesk_McBreairty
         {
             InitializeComponent();
         }
+
+        private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            var mainMenu = (MainMenu)this.Tag;
+            mainMenu.Show();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
