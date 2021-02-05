@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace MegaDesk_McBreairty
 {
@@ -53,6 +54,27 @@ namespace MegaDesk_McBreairty
 
             return 0;
             
+        }
+
+        public static decimal[,] GetRushOrder()
+        {
+            decimal[,] rushOrderPrices = new decimal[3, 3];
+
+            string file = @"\rushOrderPrices.txt";
+
+            string[] lines = File.ReadAllLines(file);
+
+            int a = 0;
+            for (int x = 0; x < 3; x++)
+            {
+                for (int y = 0; y < 3; y++)
+                {
+                    rushOrderPrices[x, y] = decimal.Parse(lines[a]);
+                    a++;
+                }
+            }
+
+            return rushOrderPrices; 
         }
     }
 }

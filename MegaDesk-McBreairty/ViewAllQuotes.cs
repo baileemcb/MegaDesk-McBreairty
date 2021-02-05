@@ -22,5 +22,10 @@ namespace MegaDesk_McBreairty
             var mainMenu = (MainMenu)this.Tag;
             mainMenu.Show();
         }
+
+        private void dataGridView1_AllowUserToOrderColumnsChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
