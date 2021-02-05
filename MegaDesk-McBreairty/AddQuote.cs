@@ -20,7 +20,18 @@ namespace MegaDesk_McBreairty
         {
             InitializeComponent();
 
+            // this code will make a list of materials from the Enum SurfaceMaterial, then Cast it to the list
+            // then use DataSource to populate the dropdown 
+
             List<SurfaceMaterial> materials = Enum.GetValues(typeof(SurfaceMaterial)).Cast<SurfaceMaterial>().ToList();
+
+            comboBoxMaterial.DataSource = materials;
+
+            // same but for ShippingPrices
+
+            List<Shipping> shippingValues = Enum.GetValues(typeof(Shipping)).Cast<Shipping>().ToList();
+
+            comboBoxShipping.DataSource = shippingValues;
 
         }
 
@@ -69,10 +80,11 @@ namespace MegaDesk_McBreairty
 
         private void btnSaveQuote_Click(object sender, EventArgs e)
         {
-            var frmDisplayQuote = new DisplayQuote();
-            frmDisplayQuote.Tag = this;
-            frmDisplayQuote.Show();
-            this.Hide();
+            // code block to create form, add reference to AddQuote, show new form, and hide AddQuote
+            // var frmDisplayQuote = new DisplayQuote();
+            // frmDisplayQuote.Tag = this;
+            // frmDisplayQuote.Show();
+            // this.Hide();
 
             // when clicking Save Quote button, will create a new desk using the 
             // new Desk() method 
@@ -89,7 +101,7 @@ namespace MegaDesk_McBreairty
             {
                 Desk = desk,
                 CustomerName = txtCustomerName.Text,
-                QuoteDate = Convert.ToInt32(DateTime.Now),
+                QuoteDate = DateTime.Now,
                 Shipping = (Shipping)comboBoxShipping.SelectedValue
             };
 

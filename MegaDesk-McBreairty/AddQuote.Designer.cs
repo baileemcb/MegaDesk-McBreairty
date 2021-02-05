@@ -191,12 +191,6 @@ namespace MegaDesk_McBreairty
             // 
             this.comboBoxMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMaterial.FormattingEnabled = true;
-            this.comboBoxMaterial.Items.AddRange(new object[] {
-            "Laminate",
-            "Oak",
-            "Rosewood",
-            "Veneer",
-            "Pine"});
             this.comboBoxMaterial.Location = new System.Drawing.Point(523, 169);
             this.comboBoxMaterial.Name = "comboBoxMaterial";
             this.comboBoxMaterial.Size = new System.Drawing.Size(176, 32);

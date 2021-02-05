@@ -12,9 +12,14 @@ namespace MegaDesk_McBreairty
 {
     public partial class DisplayQuote : Form
     {
-        public DisplayQuote()
+        DeskQuote _deskQuote;
+        public DisplayQuote(DeskQuote deskQuote)
         {
             InitializeComponent();
+
+            _deskQuote = deskQuote;
+
+            quotePriceLabel.Value = _deskQuote.QuotePrice;
         }
 
         private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
@@ -23,14 +28,5 @@ namespace MegaDesk_McBreairty
             mainMenu.Show();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

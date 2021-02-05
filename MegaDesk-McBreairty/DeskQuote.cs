@@ -20,7 +20,7 @@ namespace MegaDesk_McBreairty
     {
         public string CustomerName { get; set; }
 
-        public int QuoteDate { get; set; }
+        public DateTime QuoteDate { get; set; }
 
         public decimal QuotePrice { get; set; }
 
@@ -60,7 +60,7 @@ namespace MegaDesk_McBreairty
         {
             decimal[,] rushOrderPrices = new decimal[3, 3];
 
-            string file = @"\rushOrderPrices.txt";
+            string file = @"rushOrderPrices.txt";
 
             string[] lines = File.ReadAllLines(file);
 
