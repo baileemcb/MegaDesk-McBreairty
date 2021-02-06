@@ -46,6 +46,7 @@ namespace MegaDesk_McBreairty
                 quoteTotal = quoteTotal + extra;
             }
 
+
             // 3 add on the drawers
 
             var drawerPrice = this.Desk.NumberOfDrawers * 50;
@@ -68,13 +69,13 @@ namespace MegaDesk_McBreairty
                     case 0:
                         break;
                     case 1:
-                        quoteTotal = quoteTotal + rushOrderPrices[0,0];
+                        quoteTotal = quoteTotal + rushOrderPrices[0, 0];
                         break;
                     case 2:
-                        quoteTotal = quoteTotal + rushOrderPrices[0, 1];
+                        quoteTotal = quoteTotal + rushOrderPrices[2, 1];
                         break;
                     case 3:
-                        quoteTotal = quoteTotal + rushOrderPrices[0, 2];
+                        quoteTotal = quoteTotal + rushOrderPrices[3, 1];
                         break;
                 }
             }
@@ -85,13 +86,13 @@ namespace MegaDesk_McBreairty
                     case 0:
                         break;
                     case 1:
-                        quoteTotal = quoteTotal + rushOrderPrices[1, 0];
+                        quoteTotal = quoteTotal + rushOrderPrices[0, 1];
                         break;
                     case 2:
                         quoteTotal = quoteTotal + rushOrderPrices[1, 1];
                         break;
                     case 3:
-                        quoteTotal = quoteTotal + rushOrderPrices[1, 2];
+                        quoteTotal = quoteTotal + rushOrderPrices[2, 1];
                         break;
                 }
             }
@@ -102,10 +103,10 @@ namespace MegaDesk_McBreairty
                     case 0:
                         break;
                     case 1:
-                        quoteTotal = quoteTotal + rushOrderPrices[2, 0];
+                        quoteTotal = quoteTotal + rushOrderPrices[0, 2];
                         break;
                     case 2:
-                        quoteTotal = quoteTotal + rushOrderPrices[2, 1];
+                        quoteTotal = quoteTotal + rushOrderPrices[1, 2];
                         break;
                     case 3:
                         quoteTotal = quoteTotal + rushOrderPrices[2, 2];
@@ -123,22 +124,22 @@ namespace MegaDesk_McBreairty
 
             else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Laminate)
             {
-                quoteTotal = quoteTotal + 200;
+                quoteTotal = quoteTotal + 100;
             }
 
             else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Pine)
             {
-                quoteTotal = quoteTotal + 200;
+                quoteTotal = quoteTotal + 50;
             }
 
             else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Rosewood)
             {
-                quoteTotal = quoteTotal + 200;
+                quoteTotal = quoteTotal + 300;
             }
 
             else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Veneer)
             {
-                quoteTotal = quoteTotal + 200;
+                quoteTotal = quoteTotal + 125;
             }
 
 

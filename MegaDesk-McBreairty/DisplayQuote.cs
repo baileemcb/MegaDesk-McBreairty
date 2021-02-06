@@ -28,7 +28,7 @@ namespace MegaDesk_McBreairty
             lblDrawers.Text = deskQuote.Desk.NumberOfDrawers.ToString();
             lblMaterial.Text = deskQuote.Desk.SurfaceMaterial.ToString();
             lblShipping.Text = deskQuote.Shipping.ToString();
-            quotePriceLabel.Text = _deskQuote.QuotePrice.ToString();
+            quotePriceLabel.Text = _deskQuote.QuotePrice.ToString("c");
         }
 
         private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)

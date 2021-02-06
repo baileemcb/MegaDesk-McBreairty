@@ -29,26 +29,26 @@ namespace MegaDesk_McBreairty
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaterial1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBoxMaterial
+            // comboBoxMaterial1
             // 
-            this.comboBoxMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMaterial.FormattingEnabled = true;
-            this.comboBoxMaterial.Items.AddRange(new object[] {
+            this.comboBoxMaterial1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxMaterial1.FormattingEnabled = true;
+            this.comboBoxMaterial1.Items.AddRange(new object[] {
             "Laminate",
             "Oak",
             "Rosewood",
             "Veneer",
             "Pine"});
-            this.comboBoxMaterial.Location = new System.Drawing.Point(178, 20);
-            this.comboBoxMaterial.Name = "comboBoxMaterial";
-            this.comboBoxMaterial.Size = new System.Drawing.Size(207, 32);
-            this.comboBoxMaterial.TabIndex = 20;
+            this.comboBoxMaterial1.Location = new System.Drawing.Point(182, 20);
+            this.comboBoxMaterial1.Name = "comboBoxMaterial1";
+            this.comboBoxMaterial1.Size = new System.Drawing.Size(207, 32);
+            this.comboBoxMaterial1.TabIndex = 20;
             // 
             // label1
             // 
@@ -73,7 +73,7 @@ namespace MegaDesk_McBreairty
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBoxMaterial);
+            this.Controls.Add(this.comboBoxMaterial1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "SearchQuotes";
@@ -87,7 +87,7 @@ namespace MegaDesk_McBreairty
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBoxMaterial;
+        private System.Windows.Forms.ComboBox comboBoxMaterial1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
