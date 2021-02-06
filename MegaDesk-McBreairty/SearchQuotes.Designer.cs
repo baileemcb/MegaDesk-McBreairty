@@ -49,6 +49,7 @@ namespace MegaDesk_McBreairty
             this.comboBoxMaterial1.Name = "comboBoxMaterial1";
             this.comboBoxMaterial1.Size = new System.Drawing.Size(207, 32);
             this.comboBoxMaterial1.TabIndex = 20;
+            this.comboBoxMaterial1.SelectedValueChanged += new System.EventHandler(this.comboBoxMaterial1_SelectedValueChanged);
             // 
             // label1
             // 

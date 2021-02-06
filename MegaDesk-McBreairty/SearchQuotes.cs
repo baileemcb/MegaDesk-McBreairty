@@ -21,7 +21,7 @@ namespace MegaDesk_McBreairty
 
             comboBoxMaterial1.DataSource = materials;
 
-            loadGrid();
+            comboBoxMaterial1.SelectedIndex = -1;
         }
 
         private void SearchQuotes_FormClosed(object sender, FormClosedEventArgs e)
@@ -53,7 +53,7 @@ namespace MegaDesk_McBreairty
                          QuoteAmount = d.QuotePrice.ToString("c")
                      })
 
-                     .Where(d => d.SurfaceMaterial.Equals(comboBoxMaterial1.SelectedIndex))
+                     .Where(d => d.SurfaceMaterial.Equals(comboBoxMaterial1.SelectedItem))
 
                      .ToList();
 
@@ -62,6 +62,11 @@ namespace MegaDesk_McBreairty
                     //comboBoxMaterial1.SelectedValue == Desk.SurfaceMaterial);
 
             }
+        }
+
+        private void comboBoxMaterial1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            loadGrid();
         }
     }
 }
