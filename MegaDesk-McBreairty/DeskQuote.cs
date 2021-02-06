@@ -36,24 +36,114 @@ namespace MegaDesk_McBreairty
             // 1 add base price
             quoteTotal = 200;
 
-            // 2 calculate area 
-            var area = this.Desk.Width * this.Desk.Depth; 
+            // 2 calculate area
+            var area = this.Desk.Width * this.Desk.Depth;
 
             if (area > 1000)
             {
                 var extra = area - 1000;
 
-                quoteTotal = quoteTotal + extra; 
+                quoteTotal = quoteTotal + extra;
             }
 
-            // 3 add on the desks
+            // 3 add on the drawers
 
             var drawerPrice = this.Desk.NumberOfDrawers * 50;
 
-            quoteTotal = quoteTotal + drawerPrice; 
+            quoteTotal = quoteTotal + drawerPrice;
 
-            return 0;
+            // 4 add rush costs
+
+            //read in
+            decimal[,] rushPrices = new GetRushOrder();
+
             
+ 
+
+            decimal rushCost = (decimal)Shipping;
+            if (area < 1000)
+            {
+                switch (rushCost)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        quoteTotal = quoteTotal + rushOrderPrices[0,0];
+                        break;
+                    case 2:
+                        quoteTotal = quoteTotal + 40;
+                        break;
+                    case 3:
+                        quoteTotal = quoteTotal + 30;
+                        break;
+                }
+            }
+            else if (area < 2000)
+            {
+                switch (rushCost)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        quoteTotal = quoteTotal + 70;
+                        break;
+                    case 2:
+                        quoteTotal = quoteTotal + 50;
+                        break;
+                    case 3:
+                        quoteTotal = quoteTotal + 35;
+                        break;
+                }
+            }
+            else
+            {
+                switch (rushCost)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        quoteTotal = quoteTotal + 80;
+                        break;
+                    case 2:
+                        quoteTotal = quoteTotal + 60;
+                        break;
+                    case 3:
+                        quoteTotal = quoteTotal + 40;
+                        break;
+                }
+            }
+
+            //5 add surface material cost
+
+
+            if (this.Desk.SurfaceMaterial == SurfaceMaterial.Oak) 
+            {
+                quoteTotal = quoteTotal + 200;
+            }
+
+            else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Laminate)
+            {
+                quoteTotal = quoteTotal + 200;
+            }
+
+            else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Pine)
+            {
+                quoteTotal = quoteTotal + 200;
+            }
+
+            else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Rosewood)
+            {
+                quoteTotal = quoteTotal + 200;
+            }
+
+            else if (this.Desk.SurfaceMaterial == SurfaceMaterial.Veneer)
+            {
+                quoteTotal = quoteTotal + 200;
+            }
+
+
+            return quoteTotal;
+
         }
 
         public static decimal[,] GetRushOrder()

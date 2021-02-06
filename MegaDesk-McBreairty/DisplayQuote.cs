@@ -13,13 +13,15 @@ namespace MegaDesk_McBreairty
     public partial class DisplayQuote : Form
     {
         DeskQuote _deskQuote;
+
         public DisplayQuote(DeskQuote deskQuote)
         {
             InitializeComponent();
 
+
             _deskQuote = deskQuote;
 
-            quotePriceLabel.Value = _deskQuote.QuotePrice;
+            quotePriceLabel.Text = _deskQuote.QuotePrice.ToString();
         }
 
         private void DisplayQuote_FormClosed(object sender, FormClosedEventArgs e)
