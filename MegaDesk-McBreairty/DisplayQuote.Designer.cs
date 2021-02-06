@@ -33,21 +33,18 @@ namespace MegaDesk_McBreairty
             this.btnSaveQuote = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.quotePriceLabel = new System.Windows.Forms.Label();
-            this.comboBoxShipping = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDownDrawers = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDownDepth = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDownWidth = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
             this.CustomerName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrawers)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
+            this.lblCustomerName = new System.Windows.Forms.Label();
+            this.lblWidth = new System.Windows.Forms.Label();
+            this.lblDepth = new System.Windows.Forms.Label();
+            this.lblShipping = new System.Windows.Forms.Label();
+            this.lblDrawers = new System.Windows.Forms.Label();
+            this.lblMaterial = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnClose
@@ -59,6 +56,7 @@ namespace MegaDesk_McBreairty
             this.btnClose.TabIndex = 19;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnSaveQuote
             // 
@@ -90,20 +88,6 @@ namespace MegaDesk_McBreairty
             this.quotePriceLabel.TabIndex = 32;
             this.quotePriceLabel.Text = "label1";
             // 
-            // comboBoxShipping
-            // 
-            this.comboBoxShipping.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxShipping.FormattingEnabled = true;
-            this.comboBoxShipping.Items.AddRange(new object[] {
-            "Normal - 14 days",
-            "Rush - 3 days ",
-            "Rush - 5 days ",
-            "Rush - 7 days"});
-            this.comboBoxShipping.Location = new System.Drawing.Point(383, 218);
-            this.comboBoxShipping.Name = "comboBoxShipping";
-            this.comboBoxShipping.Size = new System.Drawing.Size(176, 32);
-            this.comboBoxShipping.TabIndex = 44;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -113,15 +97,6 @@ namespace MegaDesk_McBreairty
             this.label5.Size = new System.Drawing.Size(155, 24);
             this.label5.TabIndex = 43;
             this.label5.Text = "Shipping Options";
-            // 
-            // comboBoxMaterial
-            // 
-            this.comboBoxMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxMaterial.FormattingEnabled = true;
-            this.comboBoxMaterial.Location = new System.Drawing.Point(563, 162);
-            this.comboBoxMaterial.Name = "comboBoxMaterial";
-            this.comboBoxMaterial.Size = new System.Drawing.Size(176, 32);
-            this.comboBoxMaterial.TabIndex = 42;
             // 
             // label4
             // 
@@ -133,19 +108,6 @@ namespace MegaDesk_McBreairty
             this.label4.TabIndex = 41;
             this.label4.Text = "Desktop Material:";
             // 
-            // numericUpDownDrawers
-            // 
-            this.numericUpDownDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownDrawers.Location = new System.Drawing.Point(563, 107);
-            this.numericUpDownDrawers.Maximum = new decimal(new int[] {
-            7,
-            0,
-            0,
-            0});
-            this.numericUpDownDrawers.Name = "numericUpDownDrawers";
-            this.numericUpDownDrawers.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDownDrawers.TabIndex = 40;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -155,29 +117,6 @@ namespace MegaDesk_McBreairty
             this.label3.Size = new System.Drawing.Size(178, 24);
             this.label3.TabIndex = 39;
             this.label3.Text = "Number of Drawers:";
-            // 
-            // numericUpDownDepth
-            // 
-            this.numericUpDownDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownDepth.Location = new System.Drawing.Point(225, 165);
-            this.numericUpDownDepth.Maximum = new decimal(new int[] {
-            48,
-            0,
-            0,
-            0});
-            this.numericUpDownDepth.Minimum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numericUpDownDepth.Name = "numericUpDownDepth";
-            this.numericUpDownDepth.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDownDepth.TabIndex = 38;
-            this.numericUpDownDepth.Value = new decimal(new int[] {
-            48,
-            0,
-            0,
-            0});
             // 
             // label2
             // 
@@ -189,29 +128,6 @@ namespace MegaDesk_McBreairty
             this.label2.TabIndex = 37;
             this.label2.Text = "Depth:";
             // 
-            // numericUpDownWidth
-            // 
-            this.numericUpDownWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDownWidth.Location = new System.Drawing.Point(225, 108);
-            this.numericUpDownWidth.Maximum = new decimal(new int[] {
-            96,
-            0,
-            0,
-            0});
-            this.numericUpDownWidth.Minimum = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            this.numericUpDownWidth.Name = "numericUpDownWidth";
-            this.numericUpDownWidth.Size = new System.Drawing.Size(120, 29);
-            this.numericUpDownWidth.TabIndex = 36;
-            this.numericUpDownWidth.Value = new decimal(new int[] {
-            24,
-            0,
-            0,
-            0});
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -221,14 +137,6 @@ namespace MegaDesk_McBreairty
             this.label1.Size = new System.Drawing.Size(68, 24);
             this.label1.TabIndex = 35;
             this.label1.Text = "Width: ";
-            // 
-            // txtCustomerName
-            // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(383, 49);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(249, 29);
-            this.txtCustomerName.TabIndex = 34;
             // 
             // CustomerName
             // 
@@ -240,22 +148,82 @@ namespace MegaDesk_McBreairty
             this.CustomerName.TabIndex = 33;
             this.CustomerName.Text = "Customer Name: ";
             // 
+            // lblCustomerName
+            // 
+            this.lblCustomerName.AutoSize = true;
+            this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerName.Location = new System.Drawing.Point(357, 54);
+            this.lblCustomerName.Name = "lblCustomerName";
+            this.lblCustomerName.Size = new System.Drawing.Size(60, 24);
+            this.lblCustomerName.TabIndex = 44;
+            this.lblCustomerName.Text = "label7";
+            // 
+            // lblWidth
+            // 
+            this.lblWidth.AutoSize = true;
+            this.lblWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWidth.Location = new System.Drawing.Point(216, 113);
+            this.lblWidth.Name = "lblWidth";
+            this.lblWidth.Size = new System.Drawing.Size(60, 24);
+            this.lblWidth.TabIndex = 45;
+            this.lblWidth.Text = "label7";
+            // 
+            // lblDepth
+            // 
+            this.lblDepth.AutoSize = true;
+            this.lblDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepth.Location = new System.Drawing.Point(226, 170);
+            this.lblDepth.Name = "lblDepth";
+            this.lblDepth.Size = new System.Drawing.Size(60, 24);
+            this.lblDepth.TabIndex = 46;
+            this.lblDepth.Text = "label7";
+            // 
+            // lblShipping
+            // 
+            this.lblShipping.AutoSize = true;
+            this.lblShipping.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShipping.Location = new System.Drawing.Point(379, 226);
+            this.lblShipping.Name = "lblShipping";
+            this.lblShipping.Size = new System.Drawing.Size(60, 24);
+            this.lblShipping.TabIndex = 47;
+            this.lblShipping.Text = "label7";
+            // 
+            // lblDrawers
+            // 
+            this.lblDrawers.AutoSize = true;
+            this.lblDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDrawers.Location = new System.Drawing.Point(563, 112);
+            this.lblDrawers.Name = "lblDrawers";
+            this.lblDrawers.Size = new System.Drawing.Size(60, 24);
+            this.lblDrawers.TabIndex = 48;
+            this.lblDrawers.Text = "label7";
+            // 
+            // lblMaterial
+            // 
+            this.lblMaterial.AutoSize = true;
+            this.lblMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaterial.Location = new System.Drawing.Point(538, 170);
+            this.lblMaterial.Name = "lblMaterial";
+            this.lblMaterial.Size = new System.Drawing.Size(60, 24);
+            this.lblMaterial.TabIndex = 49;
+            this.lblMaterial.Text = "label7";
+            // 
             // DisplayQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBoxShipping);
+            this.Controls.Add(this.lblMaterial);
+            this.Controls.Add(this.lblDrawers);
+            this.Controls.Add(this.lblShipping);
+            this.Controls.Add(this.lblDepth);
+            this.Controls.Add(this.lblWidth);
+            this.Controls.Add(this.lblCustomerName);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBoxMaterial);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.numericUpDownDrawers);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.numericUpDownDepth);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDownWidth);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtCustomerName);
             this.Controls.Add(this.CustomerName);
             this.Controls.Add(this.quotePriceLabel);
             this.Controls.Add(this.label6);
@@ -264,9 +232,6 @@ namespace MegaDesk_McBreairty
             this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.DisplayQuote_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrawers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,17 +242,17 @@ namespace MegaDesk_McBreairty
         private System.Windows.Forms.Button btnSaveQuote;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label quotePriceLabel;
-        private System.Windows.Forms.ComboBox comboBoxShipping;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxMaterial;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDownDrawers;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown numericUpDownDepth;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDownWidth;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCustomerName;
         private System.Windows.Forms.Label CustomerName;
+        private System.Windows.Forms.Label lblCustomerName;
+        private System.Windows.Forms.Label lblWidth;
+        private System.Windows.Forms.Label lblDepth;
+        private System.Windows.Forms.Label lblShipping;
+        private System.Windows.Forms.Label lblDrawers;
+        private System.Windows.Forms.Label lblMaterial;
     }
 }

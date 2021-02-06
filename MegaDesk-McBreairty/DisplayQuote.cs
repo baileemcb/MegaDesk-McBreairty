@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace MegaDesk_McBreairty
 {
+  
     public partial class DisplayQuote : Form
     {
         DeskQuote _deskQuote;
@@ -21,6 +22,12 @@ namespace MegaDesk_McBreairty
 
             _deskQuote = deskQuote;
 
+            lblCustomerName.Text = deskQuote.CustomerName;
+            lblWidth.Text = deskQuote.Desk.Width.ToString();
+            lblDepth.Text = deskQuote.Desk.Depth.ToString();
+            lblDrawers.Text = deskQuote.Desk.NumberOfDrawers.ToString();
+            lblMaterial.Text = deskQuote.Desk.SurfaceMaterial.ToString();
+            lblShipping.Text = deskQuote.Shipping.ToString();
             quotePriceLabel.Text = _deskQuote.QuotePrice.ToString();
         }
 
@@ -28,7 +35,14 @@ namespace MegaDesk_McBreairty
         {
             var mainMenu = (MainMenu)this.Tag;
             mainMenu.Show();
+            this.Close();
         }
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            var mainMenu = (MainMenu)this.Tag;
+            mainMenu.Show();
+            this.Close();
+        }
     }
 }

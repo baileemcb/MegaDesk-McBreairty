@@ -80,11 +80,6 @@ namespace MegaDesk_McBreairty
 
         private void btnSaveQuote_Click(object sender, EventArgs e)
         {
-            //code block to create form, add reference to AddQuote, show new form, and hide AddQuote
-            DisplayQuote frmDisplayQuote = new DisplayQuote(deskQuote);
-            frmDisplayQuote.Tag = this;
-            frmDisplayQuote.Show();
-            this.Hide();
 
             // when clicking Save Quote button, will create a new desk using the 
             // new Desk() method 
@@ -115,7 +110,12 @@ namespace MegaDesk_McBreairty
 
             AddQuoteToFile(deskQuote);
 
-            
+            //code block to create form, add reference to AddQuote, show new form, and hide AddQuote
+            DisplayQuote frmDisplayQuote = new DisplayQuote(deskQuote);
+            frmDisplayQuote.Show();
+            this.Hide();
+
+
 
         }
     }

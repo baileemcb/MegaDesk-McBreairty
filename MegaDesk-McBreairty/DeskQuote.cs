@@ -55,10 +55,10 @@ namespace MegaDesk_McBreairty
             // 4 add rush costs
 
             //read in
-            decimal[,] rushPrices = new GetRushOrder();
+            decimal[,] rushOrderPrices;
 
-            
- 
+            rushOrderPrices = GetRushOrder();
+
 
             decimal rushCost = (decimal)Shipping;
             if (area < 1000)
@@ -71,10 +71,10 @@ namespace MegaDesk_McBreairty
                         quoteTotal = quoteTotal + rushOrderPrices[0,0];
                         break;
                     case 2:
-                        quoteTotal = quoteTotal + 40;
+                        quoteTotal = quoteTotal + rushOrderPrices[0, 1];
                         break;
                     case 3:
-                        quoteTotal = quoteTotal + 30;
+                        quoteTotal = quoteTotal + rushOrderPrices[0, 2];
                         break;
                 }
             }
@@ -85,13 +85,13 @@ namespace MegaDesk_McBreairty
                     case 0:
                         break;
                     case 1:
-                        quoteTotal = quoteTotal + 70;
+                        quoteTotal = quoteTotal + rushOrderPrices[1, 0];
                         break;
                     case 2:
-                        quoteTotal = quoteTotal + 50;
+                        quoteTotal = quoteTotal + rushOrderPrices[1, 1];
                         break;
                     case 3:
-                        quoteTotal = quoteTotal + 35;
+                        quoteTotal = quoteTotal + rushOrderPrices[1, 2];
                         break;
                 }
             }
@@ -102,13 +102,13 @@ namespace MegaDesk_McBreairty
                     case 0:
                         break;
                     case 1:
-                        quoteTotal = quoteTotal + 80;
+                        quoteTotal = quoteTotal + rushOrderPrices[2, 0];
                         break;
                     case 2:
-                        quoteTotal = quoteTotal + 60;
+                        quoteTotal = quoteTotal + rushOrderPrices[2, 1];
                         break;
                     case 3:
-                        quoteTotal = quoteTotal + 40;
+                        quoteTotal = quoteTotal + rushOrderPrices[2, 2];
                         break;
                 }
             }
